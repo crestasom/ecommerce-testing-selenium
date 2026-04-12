@@ -15,7 +15,7 @@ public class LoginTest extends BaseTest {
 		LoginPage loginPage = new LoginPage(driver, "username", "password", "loginBtn");
 		loginPage.open();
 		loginPage.login("crestasom", "shrestha@132");
-		Thread.sleep(10000);
+//		Thread.sleep(10000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("products"));
 	}
 
@@ -25,7 +25,7 @@ public class LoginTest extends BaseTest {
 		LoginPage loginPage = new LoginPage(driver, "username", "password", "loginBtn");
 		loginPage.open();
 		loginPage.login("crestasom", "wrongpassword");
-		Thread.sleep(10000);
+//		Thread.sleep(10000);
 		Assert.assertTrue(driver.getCurrentUrl().contains("login"));
 	}
 }

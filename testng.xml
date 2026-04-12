@@ -1,11 +1,20 @@
 <suite name="Selenium Suite" parallel="methods" thread-count="2">
 	<!-- <suite name="Selenium Suite" > -->
-	<test name="Login Tests">
-	<parameter name="browser" value="chrome"/>
+	<test name="Admin Tests">
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class
-				name="com.crestasom.ecom_selenium_testing.tests.LoginTest" />
-				
+				name="com.crestasom.ecom_selenium_testing.tests.AddProductTest">
+				<parameter name="username" value="crestasom" />
+				<parameter name="password" value="shrestha@132" />
+			</class>
+			<!-- <class
+				name="com.crestasom.ecom_selenium_testing.tests.AddCartTest">
+				<parameter name="username" value="user" />
+				<parameter name="password" value="shrestha@132" />
+			</class> -->
 		</classes>
 	</test>
+
+	
 </suite>

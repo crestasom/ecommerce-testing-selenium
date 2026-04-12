@@ -12,6 +12,7 @@ public class AddProductTest extends BaseTest {
 	@Test
 	public void validAddProductTest() throws InterruptedException {
 		WebDriver driver = DriverFactory.getDriver();
+
 		AddProductPage addProductPage = new AddProductPage(driver);
 		addProductPage.open();
 		addProductPage.addProduct("jeans", "new jeans", "500");
@@ -22,6 +23,8 @@ public class AddProductTest extends BaseTest {
 	@Test
 	public void inValidAddProductTest() throws InterruptedException {
 		WebDriver driver = DriverFactory.getDriver();
+
+
 		AddProductPage addProductPage = new AddProductPage(driver);
 		addProductPage.open();
 		addProductPage.addProduct("jeans", "new jeans", "-500");
