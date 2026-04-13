@@ -5,12 +5,14 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.crestasom.ecom_selenium_testing.base.BaseTest;
+import com.crestasom.ecom_selenium_testing.base.BaseTestWithLogin;
 import com.crestasom.ecom_selenium_testing.pages.AddProductPage;
 import com.crestasom.ecom_selenium_testing.utils.DriverFactory;
 
+public class AddProductTest extends BaseTestWithLogin {
 
-public class AddProductTest extends BaseTest {
+
+
 	@Test(groups = { "smoke" })
 	@Parameters("role")
 	public void validAddProductTest(String role) throws InterruptedException {
@@ -28,7 +30,6 @@ public class AddProductTest extends BaseTest {
 
 	public void inValidAddProductTest(String role) throws InterruptedException {
 		WebDriver driver = DriverFactory.getDriver();
-
 
 		AddProductPage addProductPage = new AddProductPage(driver);
 		addProductPage.open(role);
