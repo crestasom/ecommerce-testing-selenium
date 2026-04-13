@@ -21,9 +21,9 @@ public class AddProductPage {
 		btnSave = By.id("btnSave");
 	}
 
-	public void open() {
+	public void open(String role) {
 		driver.get("http://localhost:8080");
-		driver.manage().addCookie(new Cookie("jwt", AuthUtil.getToken()));
+		driver.manage().addCookie(new Cookie("jwt", AuthUtil.getToken(role)));
 		driver.get("http://localhost:8080/products/add");
 	}
 

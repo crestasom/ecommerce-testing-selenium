@@ -1,20 +1,23 @@
 <suite name="Selenium Suite" parallel="methods" thread-count="2">
 	<!-- <suite name="Selenium Suite" > -->
+	<!--uncomment groups section if you want to filter by name -->
+	<!-- <groups> <run> <include name="smoke" /> <exclude name="slow" /> </run> 
+		</groups> -->
 	<test name="Admin Tests">
+
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class
 				name="com.crestasom.ecom_selenium_testing.tests.AddProductTest">
 				<parameter name="username" value="crestasom" />
 				<parameter name="password" value="shrestha@132" />
+				<parameter name="role" value="admin" />
 			</class>
-			<!-- <class
-				name="com.crestasom.ecom_selenium_testing.tests.AddCartTest">
-				<parameter name="username" value="user" />
-				<parameter name="password" value="shrestha@132" />
-			</class> -->
+			<!-- <class name="com.crestasom.ecom_selenium_testing.tests.AddCartTest"> 
+				<parameter name="username" value="user" /> <parameter name="password" value="shrestha@132" 
+				/> <parameter name="role" value="user" /> </class> -->
 		</classes>
 	</test>
 
-	
+
 </suite>
